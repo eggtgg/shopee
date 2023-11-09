@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee</title>
+</head>
+<body>
+    <div>
+        <h1>Get link shopee</h1>
+    </div>
+    <textarea cols="100" rows="20" id="dencoder"></textarea>
+    <input type="button" onclick="encode()" value="Get">
+</body>
+<script>
+    function encode() {
+        var obj = document.getElementById('dencoder');
+        const head = "https://shope.ee/an_redir?origin_link="
+        const tail = "?&affiliate_id=17396120103&sub_id=tri-egg-shopee-ao-quan"
+        var unencoded = obj.value;
+        obj.value =  head + encodeURIComponent(unencoded).replace(/'/g, "%27").replace(/"/g, "%22") + tail;
+        
+        obj.select();
+
+        obj.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(obj.value);
+    }
+</script>
+</html>
