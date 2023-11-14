@@ -1,2 +1,2 @@
 # shopee
-<https://www.markdownguide.org>
+<https://eggtgg.github.io/shopee>
